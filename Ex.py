@@ -113,7 +113,7 @@ def db_connect(dbname):
 		charset			= 'WIN1251',
 		sql_dialect		= 3,
 		role			= settings.args.role,
-		fb_library_name = os.getcwd()+'\\fbclient64.dll')
+		fb_library_name = os.getcwd()+'\\fbclient.dll')
 
 
 	return [settings.args.db, settings.args.login]
