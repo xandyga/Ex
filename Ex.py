@@ -17,10 +17,10 @@ def main():
 	parser.add_argument("-c", "--getcategory", action="count", help="only get category [-c ML]", default=0)
 	parser.add_argument("-up", "--update", action="count", help="update all pair from sup_set [-up]", default=0)
 	parser.add_argument("-s", "--getproduct", action="count", help="get product, default", default=0)
-	if ((len(sys.argv[2:]) > 0) and (sys.argv[2] != '-up')):
+
+	if ((len(sys.argv[1:]) > 0) and (sys.argv[1] != '-up')):
 		parser.add_argument("supplier", choices=['ML', 'ml', 'LA', 'la', 'NL', 'nl'], help="required")
-		if ((len(sys.argv[2:])>0)and(sys.argv[2] != '-c')):
-			#parser.add_argument("-s", "--getproduct", action="count",help="get product, default", default=1)
+		if ((len(sys.argv[1:])>0)and(sys.argv[1] != '-c')):
 			parser.add_argument("supcat", help="the Supplier category, only [-s]")
 			parser.add_argument("bccat", type=int, help="the BCenter category, only [-s]")
 			parser.add_argument("-search", help="the keyword filter product, only [-s]", default='')
@@ -31,8 +31,9 @@ def main():
 	settings.args = parser.parse_args()
 
 	settings.args.db = get_config('Default', 'DBName', settings.args.db)
-	#print(sys.argv)
+	print(sys.argv)
 	print(settings.args)
+	#exit()
 	#db_connect('INfo')
 	db_connect('BCenter')
 	if settings.args.update > 0:
