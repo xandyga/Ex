@@ -1,1 +1,0 @@
-hiddenimports = ['sup_ml.py', 'sup_la.py', 'sup_nl.py']

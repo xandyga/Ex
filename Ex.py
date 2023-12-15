@@ -24,7 +24,7 @@ def main():
 			parser.add_argument("supcat", help="the Supplier category, only [-s]")
 			parser.add_argument("bccat", type=int, help="the BCenter category, only [-s]")
 			parser.add_argument("-search", help="the keyword filter product, only [-s]", default='')
-	parser.add_argument("-db", help="the DB name", default='ASUSPRO:b2022')
+	parser.add_argument("-db", help="the DB name", default='Localhost:b2022')
 	parser.add_argument("-login", help="the login DB", default='IG')
 	parser.add_argument("-password", help="the password DB", default='bujhf')
 	parser.add_argument("-role", help="the role DB", default='SOFT_USER')
