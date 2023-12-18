@@ -5,6 +5,13 @@
 * py -m pip install --upgrade pip
 * pip install -r requirements.txt
 
+## XXX:
+* ig@everest:/opt/smsoft/Ex$ source /opt/smsoft/exenv/bin/activate
+* python -m pip install --upgrade pip
+* pip install -r requirements.txt
+* путь до fbclient не указывать - находит в системе
+
+
 ## **py ex.py -h**
 
   

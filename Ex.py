@@ -125,7 +125,7 @@ def db_connect(dbname):
 def get_config(section, param, default = ''):
 	config = configparser.ConfigParser()
 	try:
-		config.read('BCenter.ini')
+		config.read('bcenter.ini')
 		return config.get(section, param)
 	except:
 		return default
